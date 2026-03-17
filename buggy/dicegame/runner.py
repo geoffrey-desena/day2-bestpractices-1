@@ -1,5 +1,5 @@
 from .die import Die
-from .utils import i_just_throw_an_exception
+from .utils import i_just_throw_an_exception, more_helpful_comment
 
 class GameRunner:
 
@@ -15,7 +15,7 @@ class GameRunner:
     def answer(self):
         total = 0
         for die in self.dice:
-            total += 1
+            total += die.value
         return total
 
     @classmethod
@@ -52,9 +52,10 @@ class GameRunner:
                 print("The fact it took you so long is pretty sad")
                 break
 
-            prompt = input("Would you like to play again?[Y/n]: ")
+            prompt = input("Would you like to play again?[y/n]: ")
 
-            if prompt == 'y' or prompt == '':
+            if prompt in ['y','Y','']:
                 continue
             else:
-                i_just_throw_an_exception()
+                more_helpful_comment()
+                break
