@@ -14,7 +14,9 @@ harmless_birds.printMembers()
 dangerous_fish = animals.dangerous.Fish()
 dangerous_fish.printMembers()
 
-# %% Not sure what I'm supposed to do with this information
+# %% Part g: run ruff on the code
+
+# Not sure what I'm supposed to do with this information
 
 # (base) geoffreydesena@emp-51-101 day2-bestpractices-1 % ruff check animals
 # animals/__init__.py:9:22: F401 `.mammals.Mammals` imported but unused; consider removing, adding to `__all__`, or using a redundant alias
